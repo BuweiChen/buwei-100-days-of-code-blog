@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "buwei blog",
 };
@@ -10,7 +12,9 @@ export default function RootLayout({
   const header = (
     <header>
       <div>
-        <h1>Buwei's 100 Days of Code Blog</h1>
+        <Link href="/">
+          <h1>Buwei's 100 Days of Code Blog</h1>
+        </Link>
         <p>Welcome to my 100 Days of Code Blog</p>
         <br />
       </div>
@@ -28,7 +32,11 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {header}
+        {children}
+        {footer}
+      </body>
     </html>
   );
 }
