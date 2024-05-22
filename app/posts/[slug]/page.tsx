@@ -1,11 +1,13 @@
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
+import matter from "gray-matter";
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
   const file = `${folder}${slug}.md`;
   const content = fs.readFileSync(file, "utf8");
-  return content;
+  const matterResult = matter(content);
+  return matterResult.content;
 };
 
 const PostPage = (props: any) => {
