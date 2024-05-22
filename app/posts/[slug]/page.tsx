@@ -7,16 +7,16 @@ const getPostContent = (slug: string) => {
   const file = `${folder}${slug}.md`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
-  return matterResult.content;
+  return matterResult;
 };
 
 const PostPage = (props: any) => {
   const slug = props.params.slug;
-  const content = getPostContent(slug);
+  const post = getPostContent(slug);
   return (
     <p>
-      <h1>This is a post! {slug}</h1>
-      <Markdown>{content}</Markdown>
+      <h1>{post.data.title}</h1>
+      <Markdown>{post.content}</Markdown>
     </p>
   );
 };
