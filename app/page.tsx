@@ -1,4 +1,5 @@
 import fs from "fs";
+import Link from "next/link";
 
 const getPostMetadata = () => {
   const folder = "posts/";
@@ -10,6 +11,13 @@ const getPostMetadata = () => {
 
 const HomePage = () => {
   const postMetadata = getPostMetadata();
-  return <h1>Hello Blog!</h1>;
+  const postPreviews = postMetadata.map((slug) => (
+    <div>
+      <Link href={`/posts/${slug}`}>
+        <h2>{slug}</h2>
+      </Link>
+    </div>
+  ));
+  return <div>{postPreviews}</div>;
 };
 export default HomePage;
