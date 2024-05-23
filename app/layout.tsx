@@ -25,7 +25,7 @@ export default function RootLayout({
 
   const footer = (
     <footer>
-      <div className="border-t border-slate-400 mt-6 py-6 text-center text-slate-500">
+      <div className="border-t border-slate-400 mt-6 text-center text-slate-500">
         <br />
         <h3>Developed by Buwei</h3>
       </div>
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="mx-auto max-w-2xl">
+        <div className="mx-auto max-w-2xl px-6">
           {header}
           {children}
           {footer}

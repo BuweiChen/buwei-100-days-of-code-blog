@@ -7,6 +7,8 @@ const HomePage = () => {
   const postPreviews = postMetadata.map((post) => (
     <PostPreview key={post.slug} {...post} />
   )); // key is required when we are creating multiple elements in a list.
-  return <div>{postPreviews}</div>;
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">{postPreviews}</div>
+  );
 };
 export default HomePage;
