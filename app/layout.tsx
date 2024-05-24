@@ -2,7 +2,7 @@ import Link from "next/link";
 import "../style/globals.css";
 
 export const metadata = {
-  title: "buwei blog",
+  title: "Buwei's 100 Days of Code",
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
       <div className="text-center bg-slate-800 p-8 my-6 rounded-lg">
         <Link href="/">
           <h1 className="text-3xl text-white font-bold">
-            Buwei's 100 Days of Code Blog
+            Buwei's 100 Days of Code
           </h1>
         </Link>
         <p className="text-slate-300">Welcome to my 100 Days of Code Blog</p>
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="mx-auto max-w-2xl px-6">
+        <div className="mx-auto max-w-3xl px-6">
           {header}
           {children}
           {footer}
