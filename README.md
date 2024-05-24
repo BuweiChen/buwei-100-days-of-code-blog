@@ -1,3 +1,3 @@
-# static-blog-from-md
+# Buwei's 100 Days of Code Blog
 
-Generate lightweight static blog from Markdown files
+Lightweight static blog generated from Markdown files. Keeps track of my 100 Days of Code journey!

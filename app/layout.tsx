@@ -35,7 +35,12 @@ export default function RootLayout({
     <footer>
       <div className="border-t border-slate-400 mt-12 pt-2 text-center text-slate-500">
         <br />
-        <h3>Designed by Buwei</h3>
+        <h3>
+          Designed by{" "}
+          <Link href="https://www.buweichen.com" className="hover:underline">
+            Buwei
+          </Link>
+        </h3>
       </div>
     </footer>
   );
